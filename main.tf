@@ -39,6 +39,7 @@ resource "aws_security_group" "instance_sg-2" {
   }
 }
 # resource ec2 instances get created
+# 2 resources are created
 resource "aws_instance" "example" {
   ami                         = "ami-091138d0f0d41ff90"
   instance_type               = "t2.micro"
