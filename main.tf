@@ -10,6 +10,8 @@ terraform {
 # provider credentials
 provider "aws" {
   region     = "us-east-1"
+access_key="abcdefg"
+secret_key="zyxwvutsrq"
 }
 resource "aws_security_group" "instance_sg-2" {
   name        = "instance-sg-2"
