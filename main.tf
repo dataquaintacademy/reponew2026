@@ -38,13 +38,13 @@ resource "aws_security_group" "instance_sg-2" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
-
+# resource ec2 instances get created
 resource "aws_instance" "example" {
   ami                         = "ami-091138d0f0d41ff90"
   instance_type               = "t2.micro"
   key_name                    = "key2905"
   associate_public_ip_address = true
-  vpc_security_group_ids      = [aws_security_group.instance_sg2.id]
+  vpc_security_group_ids      = [aws_security_group.instance_sg-2.id]
   count= 2
   tags = {
     Name = "slaves"
